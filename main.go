@@ -1,7 +1,12 @@
+// Name: Umar Bin Idrees
+// RollNo: 20i-1752
+// Assignment_01
+
 package main
 
 import (
-	"Assignment01/assignment01bca"
+	"Assignment01/assignment01bca" //Package Name : "assignment01bca"
+	//Repo-Link : "https://github.com/UM00/assignment01bca.git"
 	"fmt"
 )
 
@@ -19,7 +24,7 @@ func main() {
 		fmt.Println("2. Display blockchain")
 		fmt.Println("3. Edit block transaction")
 		fmt.Println("4. Verify blockchain validity")
-		fmt.Println("5. Add a few blocks") // Added option
+		fmt.Println("5. Add a few blocks")
 		fmt.Println("6. Exit")
 
 		var choice int
@@ -83,7 +88,7 @@ func main() {
 			}
 
 		case 5:
-			// Add a few blocks (in this example, we add three blocks)
+
 			fmt.Println("\nAdding a few blocks...")
 			for i := 0; i < 3; i++ {
 
@@ -91,8 +96,6 @@ func main() {
 				fmt.Print("Enter transaction: ")
 				var trans string
 				fmt.Scan(&trans)
-
-				// You can generate nonce and previous hash as needed.
 
 				block := assignment01bca.NewBlock(trans, i+1, BlocksStore[len(BlocksStore)-1].Hash)
 				BlocksStore = append(BlocksStore, block)
